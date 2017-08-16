@@ -11958,8 +11958,8 @@ Standard deviation of prices: $165,171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I am expecting avg number of rooms 'RM' is going to propotional to price 'MEDV'.
-LSTAT is going be inversly proportonal to price 'MEDV'.
-PTRATIO might effect inversly proptaional to home price 'MEDV'.</p>
+less number of lowclass workes means the neigbourhood with better community so 'LSTAT' is going be inversly proportonal to price 'MEDV'.
+student teacher ratio should with less number represnts good neighbourhood means its like scholl city or district which will good for the neighbourhood so 'PTRATIO'might effect inversly proptaional to home price 'MEDV'.</p>
 
 </div>
 </div>
@@ -12132,13 +12132,13 @@ PTRATIO might effect inversly proptaional to home price 'MEDV'.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;train_test_split&#39;</span>
 <span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="c1"># TODO: Shuffle and split the data into training and testing subsets</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Success</span>
 <span class="k">print</span> <span class="s2">&quot;Training and testing split was successful.&quot;</span>
@@ -13278,8 +13278,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It looks like the max_depth 3 will perform better in this case. (both curves converging at 0.8 like good generaliztion of model)
-It might not effect anything mostly even we add more points for both testing and trainig curves.
-having more points might not benfit model much. but generally if we have more thats always good.</p>
+if we add more traing points it is possible of leading traing model mght go to score of 1 with ovefitting which might lead to tesing curve score to go down.</p>
+<p>having more training points might not benfit model much as the curves are converging very good for the max_depth 3.</p>
 
 </div>
 </div>
@@ -14068,7 +14068,7 @@ Predicted selling price for Client 3&#39;s home: $954,300.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It looks like the prices are reasonable according to features provided</p>
+<p>It looks like the prices are reasonable according to features provided. For client 1 it looks like its close to median and mean values and the features we used also is like normal reasonable features. all the prices also in between our min and max of housing data.I also looks like a good predictions as we get hgh value for 8 room house with very low poverty level and less student to teacher ratio.For client 2 also with 4 rooms in house with neighbourhood poverty 32 percernt which means its going be less than mean value and prediction also looks good.</p>
 
 </div>
 </div>
